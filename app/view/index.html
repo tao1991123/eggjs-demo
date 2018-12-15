@@ -24,6 +24,8 @@
           <th>#</th>
           <th>name</th>
           <th>ip</th>
+          <th>pid</th>
+          <th>ppid</th>
         </tr>
       </thead>
       <tbody>
@@ -32,6 +34,8 @@
           <th scope="row">{{ loop.index }}</th>
           <td>{{ ip.name }}</td>
           <td>{{ ip.ip }}</td>
+          <td>{{ ip.pid }}</td>
+          <td>{{ ip.ppid }}</td>
         </tr>
         {% endfor %}
       </tbody>

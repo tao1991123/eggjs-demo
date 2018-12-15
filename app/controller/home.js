@@ -13,7 +13,9 @@ class HomeController extends Controller {
       ifaces[ifname].forEach(function(iface) {
         ips.push({
           name: ifname,
-          ip: iface.address
+          ip: iface.address,
+          pid: process.pid,
+          ppid: process.ppid,
         });
       });
     });
