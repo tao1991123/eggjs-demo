@@ -11,5 +11,13 @@ module.exports = appInfo => {
   config.view = {
     defaultViewEngine: 'nunjucks',
   };
+  config.redis = {
+    client: {
+      port: 6379,      // Redis port
+      host: 'redis',   // Redis host
+      password: 'auth',
+      db: 0,
+    },
+  };
   return config;
 };

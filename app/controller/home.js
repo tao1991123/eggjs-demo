@@ -19,7 +19,14 @@ class HomeController extends Controller {
         });
       });
     });
-    await ctx.render("index.html", { ips });
+    let count;
+    try {
+      count = await this.app.redis.incr('VisitTime');
+    } catch (error) {
+      count = -1;
+    }
+ 
+    await ctx.render("index.html", { ips, count });
   }
 }
 

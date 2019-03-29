@@ -1,6 +1,6 @@
 FROM node:10-alpine
 LABEL mantainer=i@muchen.me \
-    version=0.0.1
+    version=0.0.2
 
 COPY . /opt/www
 
