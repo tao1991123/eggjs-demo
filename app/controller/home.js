@@ -1,5 +1,5 @@
 "use strict";
-
+let count = 0;
 const { Controller } = require("egg");
 const os = require("os");
 
@@ -19,13 +19,8 @@ class HomeController extends Controller {
         });
       });
     });
-    let count;
-    try {
-      count = await this.app.redis.incr('VisitTime');
-    } catch (error) {
-      count = -1;
-    }
- 
+    
+    count++;
     await ctx.render("index.html", { ips, count });
   }
 }
