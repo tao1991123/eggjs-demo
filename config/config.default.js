@@ -1,5 +1,8 @@
 'use strict';
+const uuidV5 = require("uuid/v5");
+const uuidV4 = require("uuid/v4");
 
+const id = uuidV5(uuidV4(), uuidV5.DNS);
 module.exports = appInfo => {
   const config = exports = {};
 
@@ -11,13 +14,6 @@ module.exports = appInfo => {
   config.view = {
     defaultViewEngine: 'nunjucks',
   };
-  config.redis = {
-    client: {
-      port: 6379,      // Redis port
-      host: 'redis',   // Redis host
-      password: 'auth',
-      db: 0,
-    },
-  };
+  config.PC_ID = id;
   return config;
 };

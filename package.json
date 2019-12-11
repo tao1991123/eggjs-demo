@@ -7,7 +7,8 @@
     "egg": "^2.14.1",
     "egg-redis": "^2.3.0",
     "egg-scripts": "^2.10.0",
-    "egg-view-nunjucks": "^2.2.0"
+    "egg-view-nunjucks": "^2.2.0",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "autod": "^3.0.1",
